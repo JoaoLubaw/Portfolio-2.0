@@ -2,13 +2,13 @@ from flask import Flask, make_response, jsonify, request, json
 from flask_cors import CORS
 from db import Projetos
 import psycopg2
+import os
 
-mydb = psycopg2.connect(
-    host='localhost',
-    user='mainuser',
-    password='mainpassword',
-    database='portfolio-db',
-    )
+# Obtendo as credenciais de conexão do ambiente
+railway_url = os.getenv("DATABASE_PRIVATE_URL")
+
+# Conectando ao banco de dados
+mydb = psycopg2.connect(railway_url)
 
 app = Flask(__name__)
 CORS(app)
