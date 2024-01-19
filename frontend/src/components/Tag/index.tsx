@@ -1,10 +1,14 @@
 import { TagContainer } from "./styles";
 
-const Tag = () => {
+interface TagProps {
+  name: string;
+}
+
+const Tag = ({ name }: TagProps) => {
   return (
     <TagContainer>
       <>
-        <span>React</span>
+        <span>{name}</span>
       </>
     </TagContainer>
   );

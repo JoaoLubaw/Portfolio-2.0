@@ -1,13 +1,15 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 
-export const DetaisContainer = styled.div`
-  padding: 48px 220px;
+export const DetailsContainer = styled.div`
+  margin-top: 48px;
+  padding-bottom: 48px;
   display: flex;
   gap: 16px;
 
   img {
-    height: 360px;
+    width: 40vw;
+    object-fit: cover;
   }
 
   .infos {
@@ -23,11 +25,11 @@ export const DetaisContainer = styled.div`
   }
 
   p {
-    width: 500px;
+    width: 32vh;
   }
 
   .tags {
-    margin-top: 12px;
+    margin: 12px 0;
     display: flex;
     max-width: 272px;
     flex-wrap: wrap;
@@ -44,8 +46,35 @@ export const DetaisContainer = styled.div`
       background-color: ${colors.lightgrey};
       border-radius: 8px;
       padding: 12px;
-
       margin-right: 16px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin-top: 8px;
+      font-size: 24px;
+    }
+
+    p {
+      width: 100%;
+    }
+
+    .tags {
+      max-width: 100%;
+    }
+
+    .buttons {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
     }
   }
 `;

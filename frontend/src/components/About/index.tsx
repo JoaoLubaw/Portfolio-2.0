@@ -50,11 +50,11 @@ const About = () => {
       </div>
       <div className="links">
         <a className="link" href="@">
-          <img className="svg" src={Download} alt="Instagram" />{" "}
+          <img className="svg" src={Download} alt="Instagram" />
           <h4>Baixar curriculo</h4>
         </a>
 
-        <a className="link" href="@">
+        <a className="link" href="https://www.instagram.com/po.hematomas/">
           <img className="svg" src={Instagram} alt="Download" />
           <h4>@po.hematomas</h4>
         </a>

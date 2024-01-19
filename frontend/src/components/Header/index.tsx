@@ -19,13 +19,16 @@ const Header: React.FC<Props> = ({ isMobile }: Props) => {
             <h3>Desenvolvedor FullStack</h3>
           </div>
           <div className="links">
-            <S.Link>
+            <S.Link href="https://www.github.com/JoaoLubaw" target="_blank">
               <img src={GitHubSVG} className="svg" alt="Acessar Github" />
             </S.Link>
-            <S.Link>
+            <S.Link
+              href="https://www.linkedin.com/in/joaolubawaski/"
+              target="_blank"
+            >
               <img src={LinkedinSVG} className="svg" alt="Acessar Linkedin" />
             </S.Link>
-            <S.Link>
+            <S.Link href="mailto:joaolubawaski@gmail.com">
               <img src={EmailSVG} className="svg" alt="Enviar Email" />
             </S.Link>
           </div>

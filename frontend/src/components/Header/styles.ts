@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 
 import Background from "../../assets/Background.png";
 import BackgroundMobile from "../../assets/background-mobile.png";
@@ -31,6 +31,31 @@ export const Header = styled.div`
   .links {
     margin-top: 8px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    .introduction {
+      padding-top: 20px;
+
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .links {
+      margin-top: 8px;
+    }
+  }
 `;
 export const BackgroundImage = styled.div<Props>`
   background-image: url(${(Props) =>
@@ -40,6 +65,10 @@ export const BackgroundImage = styled.div<Props>`
   background-repeat: no-repeat;
   height: 56vh;
   padding-top: 0;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 24vh;
+  }
 `;
 
 export const Link = styled.a`

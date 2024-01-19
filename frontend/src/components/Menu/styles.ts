@@ -1,33 +1,39 @@
 import styled from "styled-components";
 import { colors } from "../../styles";
 
-export const MenuContainer = styled.div`
-  margin-top: 27vh;
+export const MenuHeader = styled.div`
   background-color: ${colors.darkblue};
+  text-align: center;
+  position: relative;
+  padding-bottom: 48px;
+  margin-top: 27vh;
 
-  .menuheader {
-    text-align: center;
-    position: relative;
-    padding-bottom: 48px;
-
-    h1 {
-      font-size: 40px;
-      font-weight: 500;
-      position: absolute;
-      top: -8%; /* Ajuste o valor conforme necessário para mover o texto para fora da div */
-      left: 50%; /* Posiciona o texto no centro horizontalmente */
-      transform: translate(-50%, -50%); /* Centraliza o texto verticalmente */
-    }
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+    position: absolute;
+    top: -8%; /* Ajuste o valor conforme necessário para mover o texto para fora da div */
+    left: 50%; /* Posiciona o texto no centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza o texto verticalmente */
+  }
+`;
+export const MenuContainer = styled.div`
+  background-color: ${colors.darkblue};
+  overflow: hidden;
   }
 
   .menuitems {
     padding-bottom: 48px;
-    overflow-x: hidden;
+    overflow: hidden;
 
     display: inline-block;
     gap: 48px;
     position: relative;
     transition: all ease 0.5s;
+
+    ul {
+      overflow: hidden;
+    }
   }
 
   .menuitem {
@@ -49,6 +55,7 @@ export const MenuContainer = styled.div`
     cursor: pointer;
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
+    user-select: none;
   }
 
   .row--left {

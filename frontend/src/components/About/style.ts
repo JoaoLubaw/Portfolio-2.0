@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles";
 
 export const AboutContainer = styled.div`
   margin-top: -72px;
@@ -16,7 +17,7 @@ export const AboutContainer = styled.div`
   }
   p {
     font-size: 16px;
-    font-weight: regular;
+    font-weight: 400;
     margin: 8px 0;
   }
 
@@ -53,6 +54,31 @@ export const AboutContainer = styled.div`
     }
     .svg {
       height: 60px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+    margin-top: 0px;
+
+    .links {
+      flex-direction: row;
+      margin-top: 48px;
+    }
+
+    .division {
+      display: block;
+      text-align: center;
+
+      .part2 {
+        max-width: 100%;
+        text-align: start;
+      }
+
+      .GitStatus {
+        justify-content: center;
+        margin-top: 16px;
+      }
     }
   }
 `;

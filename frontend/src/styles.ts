@@ -16,7 +16,6 @@ export const breakpoints = {
 
 export const GlobalCss = createGlobalStyle`
 * {
-
   margin:0;
   padding: 0;
   box-sizing: border-box;
@@ -24,7 +23,6 @@ export const GlobalCss = createGlobalStyle`
   color: ${colors.white};
   list-style: none;
 	text-decoration: none;
-
   background: none;
   border:none;
 }
@@ -34,7 +32,15 @@ body {
 }
 
 .container {
-padding: 0 220px;
+padding: 0 32px;
 
+@media (min-width: ${breakpoints.tablet}) {
+	padding: 0 80px;
+	max-width: 100%;
+}
+
+
+@media (min-width: ${breakpoints.desktop}) {
+	max-width: 100%;
 }
 `;
