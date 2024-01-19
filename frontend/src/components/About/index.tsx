@@ -49,13 +49,23 @@ const About = () => {
         </div>
       </div>
       <div className="links">
-        <a className="link" href="@">
-          <img className="svg" src={Download} alt="Instagram" />
+        <a
+          className="link"
+          target="_blank"
+          href="https://drive.google.com/drive/folders/1gsjs-iG6nemKR1YzneRTmXy0KXIuuwyT?usp=drive_link"
+          rel="noreferrer"
+        >
+          <img className="svg" src={Download} alt="Baixar currículo" />
           <h4>Baixar curriculo</h4>
         </a>
 
-        <a className="link" href="https://www.instagram.com/po.hematomas/">
-          <img className="svg" src={Instagram} alt="Download" />
+        <a
+          className="link"
+          target="_blank"
+          href="https://www.instagram.com/po.hematomas/"
+          rel="noreferrer"
+        >
+          <img className="svg" src={Instagram} alt="Instagram" />
           <h4>@po.hematomas</h4>
         </a>
       </div>
