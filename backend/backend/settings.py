@@ -48,9 +48,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://joaolubawaski.vercel.app",
     'https://api-joaolubawaski.fly.dev',
     'https://127.0.0.1'
+    'https://joaolubawaskiportifolio.pythonanywhere.com'
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://api-joaolubawaski.fly.dev']
+CSRF_TRUSTED_ORIGINS = ['https://api-joaolubawaski.fly.dev', 'https://joaolubawaskiportifolio.pythonanywhere.com']
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
