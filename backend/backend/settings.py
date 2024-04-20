@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6a)8tpuiluorijl3l_%x%s(aaadrd1h2@v0fsvm__an3cr0r0$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['.vercel.app', 'now.sh', '127.0.0.1', 'localhost', 'api-joaolubawaski.fly.dev', '.fly.dev', "http://localhost:3000"]
+ALLOWED_HOSTS = ['.vercel.app', 'now.sh', '127.0.0.1', 'localhost', 'api-joaolubawaski.fly.dev', '.fly.dev', "http://localhost:3000", 'https://joaolubawaskiportifolio.pythonanywhere.com']
 
 # Application definition
 
