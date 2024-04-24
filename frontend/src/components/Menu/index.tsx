@@ -127,6 +127,7 @@ const Menu = () => {
                 gitback={project.GitBack}
                 tags={project.Tags}
                 showDetails={showDetails}
+                Imagem={project.Imagem}
               />
             </li>
           ))}

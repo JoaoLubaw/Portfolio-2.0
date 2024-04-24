@@ -23,7 +23,6 @@ const Details = ({
   linkback,
   name,
   tags,
-  img,
 }: Props) => {
   const [imgSrc, setImgSrc] = useState<string | undefined>(undefined);
 

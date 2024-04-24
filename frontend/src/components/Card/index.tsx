@@ -14,6 +14,7 @@ interface Props {
   linkback: string | undefined;
   gitback: string | undefined;
   showDetails: () => void;
+  Imagem: string;
 }
 
 const Card = ({
@@ -26,9 +27,9 @@ const Card = ({
   name,
   tags,
   showDetails,
+  Imagem,
 }: Props) => {
   const visibleTags = tags.slice(0, 3);
-  const [imgSrc, setImgSrc] = useState<string | null>(null);
   const { setDetailsVisible, setSelectedItem } = useContext(MenuContext);
 
   const showDetailsHandler = () => {
@@ -42,27 +43,14 @@ const Card = ({
       git,
       linkback,
       gitback,
-      img: imgSrc,
+      img: Imagem,
     });
   };
-
-  useEffect(() => {
-    const importImage = async () => {
-      try {
-        const imageModule = await import(`../../assets/projects/${id}.png`);
-        setImgSrc(imageModule.default);
-      } catch (error) {
-        console.error("Erro ao importar a imagem:", error);
-      }
-    };
-
-    importImage();
-  }, [name]);
 
   return (
     <>
       <CardContainer onClick={showDetailsHandler}>
-        {imgSrc && <img src={imgSrc} alt="Imagem de site" />}
+        {Imagem && <img src={Imagem} alt="Imagem de site" />}
         <div className="infos">
           <h4>{name}</h4>
           <p className="description">{desc}</p>
