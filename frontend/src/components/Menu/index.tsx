@@ -19,7 +19,7 @@ interface Props {
   git: string;
   linkback: string | undefined;
   gitback: string | undefined;
-  img: string | null;
+  Imagem: string;
 }
 
 export const MenuContext = createContext<{
@@ -137,7 +137,7 @@ const Menu = () => {
       {isDetailsVisible && selectedItem && (
         <Details
           id={selectedItem.id}
-          img={selectedItem.img}
+          Imagem={selectedItem.Imagem}
           name={selectedItem.name}
           desc={selectedItem.desc}
           git={selectedItem.git}

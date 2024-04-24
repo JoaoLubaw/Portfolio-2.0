@@ -43,7 +43,7 @@ const Card = ({
       git,
       linkback,
       gitback,
-      img: Imagem,
+      Imagem: Imagem,
     });
   };
 

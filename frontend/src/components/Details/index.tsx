@@ -4,7 +4,7 @@ import { DetailsContainer } from "./styles";
 
 interface Props {
   id: number;
-  img: string | null;
+  Imagem: string;
   name: string;
   desc: string;
   tags: string[];
@@ -23,25 +23,11 @@ const Details = ({
   linkback,
   name,
   tags,
+  Imagem,
 }: Props) => {
-  const [imgSrc, setImgSrc] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    const importImage = async () => {
-      try {
-        const imageModule = await import(`../../assets/projects/${id}.png`);
-        setImgSrc(imageModule.default);
-      } catch (error) {
-        console.error("Erro ao importar a imagem:", error);
-      }
-    };
-
-    importImage();
-  }, [name]);
-
   return (
     <DetailsContainer className="container" key={id}>
-      <img src={imgSrc} alt="Imagem do site" />
+      <img src={Imagem} alt="Imagem do site" />
       <div className="infos">
         <div className="infos--details">
           <h2>{name}</h2>
