@@ -44,7 +44,8 @@ const Menu = () => {
 
   useEffect(() => {
     if (data) {
-      setProjects(data);
+      const reversedProjects = [...data].reverse();
+      setProjects(reversedProjects);
     }
   }, [data]);
 
